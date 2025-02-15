@@ -71,7 +71,7 @@ import numpy as np
 import cv2
 from tensorflow.keras.models import load_model
 # from preprocessing import preprocess_single_image
-from scripts.preprocessing import preprocess_single_image
+from preprocessing import preprocess_single_image
 
 # Suppress TensorFlow logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
