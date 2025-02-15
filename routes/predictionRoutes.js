@@ -96,7 +96,7 @@ const predict = (req, res) => {
   console.log("Model Path:", modelPath);
 
   // Spawn a new Python process
-  const pythonProcess = spawn('python', [
+  const pythonProcess = spawn('python3', [
     path.join(__dirname, '../scripts/predict.py'), // Path to your Python script
     imagePath,  // Image URL passed as argument
     modelPath   // Model path passed as argument
