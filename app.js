@@ -24,6 +24,20 @@ app.get('/test',(req,res)=>{
     res.status(200).json("all tested")
 })
 
+
+
+app.get('/debug', (req, res) => {
+    const { exec } = require('child_process');
+    exec('pip list', (error, stdout, stderr) => {
+        if (error) {
+            return res.send(`Error: ${stderr}`);
+        }
+        res.send(`<pre>${stdout}</pre>`);
+    });
+});
+
+
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
