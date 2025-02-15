@@ -66,6 +66,11 @@
 
 import sys
 import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+
+
 import requests
 import numpy as np
 import cv2
