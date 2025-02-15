@@ -20,6 +20,9 @@ app.use(express.json());
 app.use('/api/predict', upload.single('image'), predictionRoutes); // Image is sent via form-data with key 'image'
 app.use('/api/auth',userRoutes)
 app.use('/api/testimonials',testimonialRoutes)
+app.get('/test',(req,res)=>{
+    res.status(200).json("all tested")
+})
 
 // Start server
 const PORT = process.env.PORT || 5000;
